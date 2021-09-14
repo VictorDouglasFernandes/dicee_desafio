@@ -4,16 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class DicePage extends StatefulWidget {
-
   @override
   _DicePageState createState() => _DicePageState();
 }
 
 class _DicePageState extends State<DicePage> {
-
   int leftDiceNumber = 4;
   int rightDiceNumber = 4;
 
+  /// Generates a Random number from 1 to 6 for each dice
   void changeDiceFace() {
     setState(() {
       leftDiceNumber = Random().nextInt(6) + 1;
@@ -41,7 +40,7 @@ class _DicePageState extends State<DicePage> {
               changeDiceFace();
             },
             child: DiceScaffold(
-                number: rightDiceNumber,
+              number: rightDiceNumber,
             ),
           ),
         ],

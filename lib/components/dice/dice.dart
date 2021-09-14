@@ -2,11 +2,14 @@ import 'package:flutter/widgets.dart';
 import 'package:dicee_desafio/constants.dart';
 import 'package:dicee_desafio/components/dice/dice_row.dart';
 
+/// Widget who creates a dice from 1 to 6 depending on the number given
 class Dice extends StatelessWidget {
   Dice({@required this.number});
 
   final int number;
 
+  /// Variable that stores the data of which dots should show
+  /// This variable is used by the components
   Map<dynamic, bool> numberVisibility = {
     'one': true,
     'two': true,
@@ -19,6 +22,7 @@ class Dice extends StatelessWidget {
     'nine': true,
   };
 
+  /// Change the variable of the dots depending of which number is given
   void setVisibility() {
     switch (number) {
       case 1:

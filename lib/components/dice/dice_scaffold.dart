@@ -1,6 +1,8 @@
 import 'package:dicee_desafio/components/dice/dice.dart';
 import 'package:flutter/widgets.dart';
 
+/// Scaffold for the space that the dice should occupy
+/// And generates the Widget Dice inside
 class DiceScaffold extends StatelessWidget {
   const DiceScaffold({
     @required this.number,
@@ -9,10 +11,11 @@ class DiceScaffold extends StatelessWidget {
   final int number;
 
   double getDiceSize(BuildContext context) {
-    if(MediaQuery.of(context).size.width < MediaQuery.of(context).size.height){
-      return (MediaQuery.of(context).size.width / 2)-16;
+    if (MediaQuery.of(context).size.width <
+        MediaQuery.of(context).size.height) {
+      return (MediaQuery.of(context).size.width / 2) - 16;
     } else {
-      return (MediaQuery.of(context).size.height / 2)-16;
+      return (MediaQuery.of(context).size.height / 2) - 16;
     }
   }
 

@@ -1,3 +1,4 @@
+/// Constants to map the dots that should show in the dice
 
 const Map<String, bool> numberOne = {
   'one': false,
